@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -25,10 +29,11 @@ h3 {
 
 h1 {
     margin: 0;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
 }
 
 .subtitle {
+    margin-top: 0.5rem;
     font-style: italic;
 }
 
@@ -38,8 +43,17 @@ h1 {
     border-bottom: 2px solid #b08a50;
 }
 
+.toc h2 {
+    margin-top: 0;
+}
+
 .toc ul {
-    padding-left: 1.2rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc li {
+    margin: 0.5rem 0;
 }
 
 .toc a {
@@ -54,13 +68,13 @@ h1 {
 
 main {
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
     padding: 1rem;
 }
 
 section {
-    background: rgba(255,255,255,0.4);
-    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-left: 5px solid #b08a50;
     border-radius: 8px;
@@ -69,14 +83,15 @@ section {
 blockquote {
     background: #f4ead4;
     border-left: 5px solid #8b6a3d;
-    margin: 1rem 0;
     padding: 1rem;
+    margin: 1rem 0;
     font-style: italic;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 1rem;
 }
 
 th {
@@ -100,12 +115,18 @@ footer {
     padding: 2rem;
     background: #3b2415;
     color: #f5e6c8;
+    margin-top: 2rem;
 }
 
+/* Mobile-friendly table */
 @media (max-width: 768px) {
 
     h1 {
         font-size: 1.8rem;
+    }
+
+    main {
+        padding: 0.75rem;
     }
 
     section {
@@ -115,5 +136,11 @@ footer {
     table {
         display: block;
         overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 10px;
     }
 }
