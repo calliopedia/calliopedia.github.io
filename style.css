@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5eedc;
+    color: #2d2418;
+    font-family: "Crimson Text", serif;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(#5a3a22, #3b2415);
+    color: #f5e6c8;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #c19a5b;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Cinzel", serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+.subtitle {
+    font-style: italic;
+}
+
+.toc {
+    background: #e8dcc1;
+    padding: 1rem;
+    border-bottom: 2px solid #b08a50;
+}
+
+.toc ul {
+    padding-left: 1.2rem;
+}
+
+.toc a {
+    color: #6b3f1f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+section {
+    background: rgba(255,255,255,0.4);
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #b08a50;
+    border-radius: 8px;
+}
+
+blockquote {
+    background: #f4ead4;
+    border-left: 5px solid #8b6a3d;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #5a3a22;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #b08a50;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #f8f1e2;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #3b2415;
+    color: #f5e6c8;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
