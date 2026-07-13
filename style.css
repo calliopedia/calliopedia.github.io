@@ -61,39 +61,80 @@ h1 {
 }
 
 /* =================================
-   CONTENT
+   LAYOUT
 ================================= */
 
-main {
-    max-width: 1100px;
-    margin: auto;
+.page-shell {
+    max-width: 1500px;
+    margin: 0 auto;
     padding: 1.25rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr) 260px;
+    gap: 1.5rem;
+    align-items: start;
 }
 
+main {
+    min-width: 0;
+}
+
+.sidebar {
+    position: sticky;
+    top: 1rem;
+}
+
+.sidebar-card,
 section {
     background: linear-gradient(to bottom, #162338 0%, #111a2c 100%);
     border-radius: 10px;
-    padding: 1.8rem;
+    padding: 1.4rem;
     margin-bottom: 1.5rem;
     border: 1px solid rgba(212, 170, 74, 0.28);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), 0 0 18px rgba(212, 170, 74, 0.08);
 }
 
-.intro {
-    border-left: 4px solid #b88a2f;
-}
-
-h2 {
+.sidebar-card h2,
+section h2 {
     color: #f0cf84;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin-top: 0;
     border-bottom: 2px solid #b88a2f;
     padding-bottom: 0.5rem;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-shadow: 0 1px 8px rgba(212, 170, 74, 0.16);
+}
+
+section h2 {
+    font-size: 1.7rem;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(212, 170, 74, 0.12);
+}
+
+.sidebar-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.intro {
+    border-left: 4px solid #b88a2f;
 }
 
 h3 {
@@ -142,10 +183,12 @@ strong {
 
 a {
     color: #e6c878;
+    text-decoration: none;
 }
 
 a:hover {
     color: #ffe09d;
+    text-decoration: underline;
 }
 
 details {
@@ -232,11 +275,22 @@ footer {
    MOBILE
 ================================= */
 
+@media (max-width: 1100px) {
+    .page-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 1.5rem;
     }
 
+    .sidebar-card,
     section {
         border-radius: 8px;
         padding: 1.25rem;
