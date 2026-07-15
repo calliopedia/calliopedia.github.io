@@ -4,7 +4,7 @@ const MAX_EVENTS = 8;
 
 // IMPORTANT:
 // Replace with your real Google API key (starts with AIza...)
-const API_KEY = 'PASTE_YOUR_GOOGLE_API_KEY_HERE';
+const API_KEY = 'AIzaSyD84fQVSDScKqNoCOCakEWLHCqGxzKU6vs';
 
 const agendaList = document.getElementById('agenda-events');
 
